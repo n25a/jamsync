@@ -16,7 +16,6 @@ Thank you for checking out "jamsync"!
 - [Features](#features)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 
@@ -29,7 +28,7 @@ I need to add more social media support with your contributions.
 To use "jamsync", you must have a Spotify account and a Spotify-Client-ID.
 You can get a Spotify-Client-ID by following the instructions 
 on [this video](https://developer.spotify.com/documentation/general/guides/app-settings/) and apply it 
-to [Spotfiy Developer Dashboard](https://developer.spotify.com/dashboard/applications).  
+to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).  
 
 #### Note: set the redirect URI to `"http://localhost:8080/callback"`
 
@@ -62,7 +61,12 @@ The config file is an INI file, and it has 2 sections:
     - `username`: Your Microsoft-Account-Username (Required)
     - `password`: Your Microsoft-Account-Password (Required)
 
+
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create.
 Any contributions you make are **greatly appreciated**. You can contribute to this project by 
-checking [the document]().
+checking [the document](https://github.com/n25a/jamsync/blob/master/.github/CONTRIBUTING.md).
+
+
+## Contact
+You can contact me on [Email](mailto:n.twenty.five.a@gmail.com).
