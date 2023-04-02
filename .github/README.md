@@ -1,7 +1,27 @@
-# jamsync
+<!-- PROJECT LOGO -->
+<br />
+<div style="display: flex; flex-direction: column; align-items: center">
+  <a rel="noreferrer noopener" href="https://user-images.githubusercontent.com/49960770/229376239-cb7f5104-fee8-4bd9-87d2-a5a97aa259ef.png">
+    <img src="https://user-images.githubusercontent.com/49960770/229376239-cb7f5104-fee8-4bd9-87d2-a5a97aa259ef.png" 
+        alt="Logo">
 
-Welcome to the "jamsync" repository! This project is designed to syncing your currently playing music on Spotify with
-your social media's bio.  
+  </a>
+
+  <p style="text-align: center">
+    Logo made by 
+    <a href="https://manne.ir/">Mann-E</a>.
+    Courtesy of 
+    <a href="https://haghiri75.com">Muhammadreza Haghiri</a>.
+  </p>
+
+  <h1 style="text-align: center; line-height: 10px">JamSync</h1>
+
+  <h3 style="text-align: center">
+    Sync your currently playing song on Spotify with your social media's bio!
+  </h3>
+</div>
+
+Welcome to the "jamsync" repository! 
 Using the Spotify API, "jamsync" retrieves the name of the song you're listening to and 
 updates your bio to display the title of the song. This provides an easy way 
 for your social media contacts to see what you're currently listening to and start a conversation 
@@ -9,6 +29,7 @@ about your music taste.
 With "jamsync", you can effortlessly share your favorite tunes with your social media community and 
 make new music connections. The setup process is simple and the script runs in the background, 
 so you can focus on enjoying your music while "jamsync" takes care of the rest.  
+
 Thank you for checking out "jamsync"!
 
 ## Table of Contents
