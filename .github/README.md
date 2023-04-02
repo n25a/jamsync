@@ -1,22 +1,20 @@
-<!-- PROJECT LOGO -->
-<br />
-<div style="display: flex; flex-direction: column; align-items: center">
+<div align="center">
   <a rel="noreferrer noopener" href="https://user-images.githubusercontent.com/49960770/229376239-cb7f5104-fee8-4bd9-87d2-a5a97aa259ef.png">
     <img src="https://user-images.githubusercontent.com/49960770/229376239-cb7f5104-fee8-4bd9-87d2-a5a97aa259ef.png" 
         alt="Logo">
 
   </a>
 
-  <p style="text-align: center">
+  <p align="center">
     Logo made by 
     <a href="https://manne.ir/">Mann-E</a>.
     Courtesy of 
     <a href="https://haghiri75.com">Muhammadreza Haghiri</a>.
   </p>
 
-  <h1 style="text-align: center; line-height: 10px">JamSync</h1>
+  <h1 align="center">JamSync</h1>
 
-  <h3 style="text-align: center">
+  <h3 align="center">
     Sync your currently playing song on Spotify with your social media's bio!
   </h3>
 </div>
