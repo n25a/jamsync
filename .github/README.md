@@ -18,6 +18,8 @@
     Sync your currently playing song on Spotify with your social media's bio!
   </h3>
 </div>
+<br>
+<br>
 
 Welcome to the "jamsync" repository! 
 Using the Spotify API, "jamsync" retrieves the name of the song you're listening to and 
