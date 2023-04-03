@@ -1,13 +1,12 @@
 import time
 import os
 import logging
-from typing import Optional
+from typing import Optional, Generator
 
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 from utils import Music
-from skype import Skype
 from config import config
 
 
@@ -20,10 +19,9 @@ class SpotifyLoginException(Exception):
 
 class Spotify:
 
-    def __init__(self, skype_client: Skype):
+    def __init__(self):
         """
         the initializer method for the Spotify class
-        :param skype_client: the Skype client
         """
         url = "http://localhost:8080/callback"
         os.system(
@@ -54,7 +52,6 @@ class Spotify:
             raise SpotifyLoginException(
                 "Cannot get the username of the Spotify account"
             )
-        self.skype_client = skype_client
 
     def __current_user_playing_track(self) -> Optional[Music]:
         """
@@ -83,7 +80,7 @@ class Spotify:
             logging.error(e)
             return None
 
-    def monitor_playing(self) -> None:
+    def monitor_playing(self, sleep_time: int = 8) -> Generator[Music, None, None]:
         """
         Monitor the current playing track of the user and
         update the bio of the user with the current playing track
@@ -96,5 +93,5 @@ class Spotify:
                         music.spotify_link == last_music.spotify_link:
                     continue
                 last_music = music
-                self.skype_client.update_bio(music)
-            time.sleep(8)
+                yield music
+            time.sleep(sleep_time)

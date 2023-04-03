@@ -1,1 +1,0 @@
-from .skype import Skype

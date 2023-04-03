@@ -3,8 +3,9 @@ import logging
 import skpy
 from retry import retry
 
-from utils import print_color, line, Music, Colors
 from config import config
+from utils import print_color, line, Music, Colors
+from .social import Social
 
 
 class SkypeLoginException(skpy.SkypeAuthException, skpy.SkypeApiException):
@@ -14,7 +15,7 @@ class SkypeLoginException(skpy.SkypeAuthException, skpy.SkypeApiException):
     ...
 
 
-class Skype:
+class Skype(Social):
     _emoji_index = 0
     emojis = [
         "(soccerball)", "(goldmedal)", "(lacrosse)", "(1f3b0_slotmachine)",
@@ -63,7 +64,7 @@ class Skype:
             logging.error(e)
             raise SkypeLoginException("Login failed.")
 
-    def update_bio(self, music: Music) -> None:
+    def _update_bio(self, music: Music) -> None:
         """
         update the bio of the current user with the current music playing
         on Spotify in the following format:
@@ -120,3 +121,7 @@ class Skype:
             plain=msg,
             rich=rich
         ) if msg else None
+
+    def update(self, music: Music) -> None:
+        return self._update_bio(music)
+

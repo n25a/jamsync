@@ -1,6 +1,6 @@
 from utils.print import print_color, Colors
 from spotify import Spotify
-from skype import Skype
+from social import Social, Skype
 from config import config
 
 # TODO : Add readme
@@ -13,7 +13,13 @@ if __name__ == '__main__':
         )
         exit(1)
 
+    social_medias: [Social] = []
+
     if config.skype.enabled:
-        _skype = Skype()
-        spotify = Spotify(skype_client=_skype)
-        spotify.monitor_playing()
+        social_medias.append(Skype())
+
+    spotify = Spotify()
+
+    for music in spotify.monitor_playing():
+        for social in social_medias:
+            social.update(music)
