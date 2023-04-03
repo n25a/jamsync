@@ -63,6 +63,10 @@ class Spotify:
         """
         try:
             result = self.spotify_client.current_user_playing_track()
+
+            if result is None:
+                return None
+
             music_name = result['item']['name']
             artists = ""
 
