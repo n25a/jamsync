@@ -80,7 +80,7 @@ class Spotify:
             logging.error(e)
             return None
 
-    def monitor_playing(self, sleep_time: int = 8) -> Generator[Music, None, None]:
+    def monitor_playing(self, sleep: int = 8) -> Generator[Music, None, None]:
         """
         Monitor the current playing track of the user and
         update the bio of the user with the current playing track
@@ -94,4 +94,4 @@ class Spotify:
                     continue
                 last_music = music
                 yield music
-            time.sleep(sleep_time)
+            time.sleep(sleep)

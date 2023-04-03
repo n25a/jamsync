@@ -3,8 +3,9 @@ import logging
 import skpy
 from retry import retry
 
-from config import config
 from utils import print_color, line, Music, Colors
+from config import config
+
 from .social import Social
 
 
@@ -124,4 +125,3 @@ class Skype(Social):
 
     def update(self, music: Music) -> None:
         return self._update_bio(music)
-
