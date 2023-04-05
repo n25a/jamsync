@@ -8,8 +8,8 @@ from config import config
 if __name__ == '__main__':
     if not any([config.skype.enabled]):
         print_color(
-            "Please enable at least one service in your config file",
-            Colors.FAIL
+            'Please enable at least one service in your config file',
+            Colors.FAIL,
         )
         exit(1)
 
