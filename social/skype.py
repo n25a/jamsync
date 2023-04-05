@@ -131,4 +131,11 @@ class Skype(Social):
         )
 
     def update(self, music: Music) -> None:
-        return self._update_bio(music)
+        """
+        update Skype bio with the current music playing
+        on Spotify in the following format:
+        <emoji> <song name> - <artist name> - <spotify link>
+
+        :param music: the object containing the music information
+        """
+        self._update_bio(music)
