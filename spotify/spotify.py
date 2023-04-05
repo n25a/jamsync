@@ -15,7 +15,7 @@ class SpotifyLoginException(Exception):
     all the exceptions related to the Spotify login
     """
 
-    pass
+    ...
 
 
 class Spotify:
@@ -80,6 +80,9 @@ class Spotify:
         """
         Monitor the current playing track of the user and
         update the bio of the user with the current playing track
+
+        :param sleep: the time to sleep between each check
+        :return: the current playing track
         """
         last_music = None
         while True:
