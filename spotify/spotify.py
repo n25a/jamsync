@@ -14,27 +14,23 @@ class SpotifyLoginException(Exception):
     """
     all the exceptions related to the Spotify login
     """
+
     pass
 
 
 class Spotify:
-
     def __init__(self):
         """
         the initializer method for the Spotify class
         """
-        url = "http://localhost:8080/callback"
+        url = 'http://localhost:8080/callback'
+        os.system('export SPOTIPY_CLIENT_ID=' + config.spotify.client_id)
         os.system(
-            "export SPOTIPY_CLIENT_ID=" +
-            config.spotify.client_id)
-        os.system(
-            "export SPOTIPY_CLIENT_SECRET=" +
-            config.spotify.client_secret)
-        os.system(
-            "export SPOTIPY_REDIRECT_URI=" +
-            url)
+            'export SPOTIPY_CLIENT_SECRET=' + config.spotify.client_secret
+        )
+        os.system('export SPOTIPY_REDIRECT_URI=' + url)
 
-        scope = "user-library-read,user-read-currently-playing"
+        scope = 'user-library-read,user-read-currently-playing'
         oauth_manager = SpotifyOAuth(
             client_id=config.spotify.client_id,
             client_secret=config.spotify.client_secret,
@@ -48,9 +44,9 @@ class Spotify:
         )
 
         user = self.spotify_client.current_user()
-        if user.get('display_name', "") == "":
+        if user.get('display_name', '') == '':
             raise SpotifyLoginException(
-                "Cannot get the username of the Spotify account"
+                'Cannot get the username of the Spotify account'
             )
 
     def __current_user_playing_track(self) -> Optional[Music]:
@@ -65,15 +61,15 @@ class Spotify:
                 return None
 
             music_name = result['item']['name']
-            artists = ""
+            artists = ''
 
             for artist in result['item']['artists']:
-                if artists == "":
+                if artists == '':
                     artists += artist['name']
                 else:
-                    artists += "," + artist['name']
+                    artists += ',' + artist['name']
 
-            link = result['item']['external_urls']['spotify'] or ""
+            link = result['item']['external_urls']['spotify'] or ''
 
             return Music(music_name, artists, link)
         except Exception as e:
@@ -89,8 +85,10 @@ class Spotify:
         while True:
             music = self.__current_user_playing_track()
             if music is not None:
-                if last_music is not None and \
-                        music.spotify_link == last_music.spotify_link:
+                if (
+                    last_music is not None
+                    and music.spotify_link == last_music.spotify_link
+                ):
                     continue
                 last_music = music
                 yield music

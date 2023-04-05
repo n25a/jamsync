@@ -4,7 +4,6 @@ from utils import Music
 
 
 class Social(abc.ABC):
-
     @abc.abstractmethod
     def update(self, music: Music) -> None:
         """

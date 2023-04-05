@@ -4,7 +4,6 @@ from typing import Union
 
 
 class Config:
-
     class Skype:
         def __init__(self, enabled: bool, username: str, password: str):
             """
@@ -35,20 +34,20 @@ class Config:
 
         :param config_path: the path to the config file
         """
-        if config_path == "":
-            raise ValueError("Config path cannot be empty")
+        if config_path == '':
+            raise ValueError('Config path cannot be empty')
         __config = configparser.ConfigParser()
         __config.read(config_path)
 
         self.skype = self.Skype(
             enabled=bool(__config['skype']['enabled'] or 0),
-            username=__config['skype']['username'] or "",
-            password=__config['skype']['password'] or "",
+            username=__config['skype']['username'] or '',
+            password=__config['skype']['password'] or '',
         )
 
         self.spotify = self.Spotify(
-            client_id=__config['spotify']['client_id'] or "",
-            client_secret=__config['spotify']['client_secret'] or "",
+            client_id=__config['spotify']['client_id'] or '',
+            client_secret=__config['spotify']['client_secret'] or '',
         )
 
 
