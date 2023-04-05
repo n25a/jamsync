@@ -48,7 +48,8 @@ I need to add more social media support with your contributions.
 ## Usage
 To use "jamsync", you must have a Spotify account and a Spotify-Client-ID.
 You can get a Spotify-Client-ID by following the instructions 
-on [here](https://developer.spotify.com/documentation/web-api/tutorials/getting-started#create-an-app)
+on [here](https://developer.spotify.com/documentation/web-api/tutorials/getting-started#create-an-app). 
+(You can look at the [video](https://www.youtube.com/watch?v=3RGm4jALukM) for easier understanding.)
 
 #### Note: set the redirect URI to `"http://localhost:8080/callback"`
 
