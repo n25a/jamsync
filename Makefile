@@ -10,7 +10,7 @@ flake8:
 	- flake8 --exclude='.tox','__init__.py','venv/','tests/' --extend-exclude='*_pb2*.py' .
 
 blue:
-	- blue . --exclude=['.tox','__init__.py','venv/','tests/']
+	- blue --extend-exclude='__init__.py','tests/' ./..
 
 lint: isort blue flake8
 
