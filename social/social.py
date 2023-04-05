@@ -5,6 +5,13 @@ from utils import Music
 
 class Social(abc.ABC):
     @abc.abstractmethod
+    def __login(self) -> None:
+        """
+        login to the social media account
+        """
+        raise NotImplementedError
+
+    @abc.abstractmethod
     def update(self, music: Music) -> None:
         """
         update the social media status with the current music playing
