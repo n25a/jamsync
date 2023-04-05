@@ -48,8 +48,8 @@ I need to add more social media support with your contributions.
 ## Usage
 To use "jamsync", you must have a Spotify account and a Spotify-Client-ID.
 You can get a Spotify-Client-ID by following the instructions 
-on [this video](https://developer.spotify.com/documentation/general/guides/app-settings/) and apply it 
-to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).  
+on [here](https://developer.spotify.com/documentation/web-api/tutorials/getting-started#create-an-app). 
+(You can look at the [video](https://www.youtube.com/watch?v=3RGm4jALukM) for easier understanding.)
 
 #### Note: set the redirect URI to `"http://localhost:8080/callback"`
 
@@ -60,7 +60,7 @@ with the following command:
 pip install -r requirements.txt
 ```
 
-You need the config file to run the script and the `example.config.ini` file is an example of the config file.
+You need the config file to run the script and the `config.example.ini` file is an example of the config file.
 After filling the config file, you can run the script with the following command:
 
 ```bash

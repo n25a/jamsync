@@ -13,7 +13,7 @@ class Colors:
     ENDC = '\033[0m'
 
 
-line = "-------------------------------------------------------------------"
+line = '-------------------------------------------------------------------'
 
 
 def print_color(text: ..., colors: Union[Colors, List[Colors]]) -> None:
@@ -25,7 +25,7 @@ def print_color(text: ..., colors: Union[Colors, List[Colors]]) -> None:
     if not isinstance(colors, list):
         colors = [colors]
 
-    joined_colors = ""
+    joined_colors = ''
     for color in colors:
         joined_colors += color
-    print(f"{joined_colors}{text}{Colors.ENDC}")
+    print(f'{joined_colors}{text}{Colors.ENDC}')
